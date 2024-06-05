@@ -50,3 +50,7 @@ jobs:
       # Runs unit test
       - name: Run tests
         run: flutter test
+      
+        # Create android apk
+      - name: Build apk
+        run: flutter build apk  
