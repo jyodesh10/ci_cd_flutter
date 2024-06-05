@@ -59,3 +59,11 @@ jobs:
         # Create android apk
       - name: Build apk
         run: flutter build apk  
+
+        #upload
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-flutter-apk
+          path: build/app/outputs/apk/release/app-release.apk
+      
