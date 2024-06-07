@@ -66,4 +66,13 @@ jobs:
         with:
           name: my-flutter-apk
           path: build/app/outputs/apk/release/app-release.apk
+        
+
+      - name: Google Drive upload
+        uses: willo32/google-drive-upload-action@v1.1.0
+        with:
+          target: build/app/outputs/apk/release/app-release.apk
+          credentials: ${{ secrets.GITHUB_TOKEN }}
+          parent_folder_id: Release
+      
       
